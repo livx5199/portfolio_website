@@ -1,0 +1,726 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: avenir;
+  text-align: inherit;
+  font-size: 0.54rem;
+  color: #1b1464;
+}
+
+@media (min-width: 300px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #005faa;
+}
+
+a:hover {
+  color: #79bcf0;
+}
+
+a h3 {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.6rem;
+  text-align: center;
+  padding-top: 5%;
+}
+
+@media (min-width: 300px) {
+  a h3 {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 4%;
+  }
+}
+
+@media (min-width: 1000px) {
+  a h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1%;
+  }
+}
+
+@media (min-width: 800px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #005faa;
+  }
+}
+
+/*********ARTWORK***********/
+
+#splash {
+  grid-column: 1/2;
+  width: 100%;
+  aspect-ratio: 896/1187;
+  position: relative;
+  background-image: url(./billeder/baggrund.svg);
+  background-size: cover;
+}
+
+.livlilholt {
+  width: 3.7%;
+  aspect-ratio: 30.93/654.59;
+  top: 6%;
+  left: 10%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(./billeder/livlilholt.svg);
+}
+
+.sky1 {
+  width: 33%;
+  aspect-ratio: 339/114;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(./billeder/sky.svg);
+}
+
+.sky2 {
+  width: 33%;
+  aspect-ratio: 339/114;
+  top: 38%;
+  left: 55%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(./billeder/sky.svg);
+}
+
+.sky1 {
+  animation-name: fly;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.sky2 {
+  animation-name: fly;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.moon {
+  width: 33%;
+  aspect-ratio: 317/192;
+  top: 0%;
+  left: 34%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(./billeder/måne.svg);
+}
+
+.moon {
+  animation-name: pulse;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#portfolio {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  #portfolio {
+    grid-column: 2/3;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    justify-content: center;
+    place-items: center;
+  }
+}
+
+/***********MENU************/
+
+#tema1 {
+  width: 26%;
+  aspect-ratio: 243/243;
+  position: relative;
+  opacity: 0.7;
+}
+
+#html {
+  width: 70%;
+  top: 38%;
+  left: 115%;
+  aspect-ratio: 253.68/64.21;
+  position: absolute;
+  background-image: url(./billeder/htmltext.svg);
+  background-size: cover;
+  opacity: 0;
+}
+
+.html_sprite {
+  width: 70%;
+  top: 38%;
+  left: 115%;
+  aspect-ratio: 253.68/64.21;
+  position: absolute;
+  background-size: cover;
+  opacity: 0;
+}
+
+#tema2 {
+  width: 26%;
+  aspect-ratio: 243/243;
+  position: relative;
+  opacity: 0.7;
+}
+
+#ux {
+  width: 62%;
+  top: 41%;
+  left: -83%;
+  aspect-ratio: 191.01/64.21;
+  position: absolute;
+  background-image: url(./billeder/textux.svg);
+  background-size: cover;
+  opacity: 0;
+}
+
+.ux_sprite {
+  width: 62%;
+  top: 41%;
+  left: -83%;
+  aspect-ratio: 191.01/64.21;
+  position: absolute;
+  background-size: cover;
+  opacity: 0;
+}
+
+#tema3 {
+  width: 26%;
+  aspect-ratio: 243/243;
+  position: relative;
+  opacity: 0.7;
+}
+
+#animation {
+  width: 121%;
+  top: 41%;
+  left: 115%;
+  aspect-ratio: 386.06/64.21;
+  position: absolute;
+  background-image: url(./billeder/animationtext.svg);
+  background-size: cover;
+  opacity: 0;
+}
+
+.animation_sprite {
+  width: 120%;
+  top: 41%;
+  left: 115.5%;
+  aspect-ratio: 386.06/64.21;
+  position: absolute;
+  background-size: cover;
+  opacity: 0;
+}
+
+#tema4 {
+  width: 26%;
+  aspect-ratio: 243/243;
+  position: relative;
+  opacity: 0.7;
+}
+
+#content {
+  width: 109.5%;
+  top: 41%;
+  left: -128.6%;
+  aspect-ratio: 331.51/64.21;
+  position: absolute;
+  background-image: url(./billeder/contenttext.svg);
+  background-size: cover;
+  opacity: 0;
+}
+
+.content_sprite {
+  width: 110%;
+  top: 41%;
+  left: -129%;
+  aspect-ratio: 331.51/64.21;
+  position: absolute;
+  background-size: cover;
+  opacity: 0;
+}
+
+#tema1:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+#tema2:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+#tema3:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+#tema4:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/************ABOUT*************/
+
+#about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 2%;
+  gap: 5%;
+  align-items: center;
+  margin: 5%;
+}
+
+h1 {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.6rem;
+  color: #1b1464;
+}
+
+@media (min-width: 300px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+#about li {
+  font-family: avenir;
+  font-size: 0.55rem;
+  text-align: left;
+  color: #1b1464;
+}
+
+@media (min-width: 300px) {
+  #about li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #about li {
+    font-size: 1rem;
+  }
+}
+
+/*******DETTE PROJEKT******/
+
+#thisproject {
+  padding: 5%;
+  background-color: #96bfdf;
+}
+
+#thisproject h1 {
+  text-align: center;
+}
+
+#aboutheader {
+  width: 50%;
+  background-image: url(./billeder/about.svg);
+  background-size: cover;
+  aspect-ratio: 183.54/82.84;
+  position: absolute;
+  top: 97%;
+  left: 45%;
+}
+
+@media (min-width: 800px) {
+  #aboutheader {
+    width: 60%;
+    background-image: url(./billeder/about.svg);
+    background-size: cover;
+    aspect-ratio: 183.54/82.84;
+    position: absolute;
+    top: 96.5%;
+    left: 90%;
+  }
+}
+
+.image1 {
+  grid-column: 1/2;
+  margin-left: 10%;
+}
+
+.image1 img {
+  width: 70%;
+  aspect-ratio: 552/552;
+}
+
+.text1 {
+  grid-column: 2/3;
+  width: 80%;
+  padding-top: 20%;
+}
+
+/*******BASIC HTML*******/
+
+#projectsheader {
+  background-color: #005faa;
+  width: 100%;
+  display: grid;
+}
+
+#projectsection {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#webtekst {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.basic {
+  width: 100%;
+  background-image: url(./billeder/basic.svg);
+  aspect-ratio: 887/116.99;
+  background-size: cover;
+  position: relative;
+  background-color: #005faa;
+}
+
+.web {
+  width: 31%;
+  position: absolute;
+  background-image: url(./billeder/web.svg);
+  background-size: cover;
+  aspect-ratio: 439.34/271.32;
+  top: 75%;
+  left: 55%;
+}
+
+.teksthtml {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20%;
+}
+
+@media (min-width: 600px) {
+  .teksthtml {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 20%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .teksthtml {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+  }
+}
+
+#billederhtml {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 100%;
+  background-image: url(./billeder/webbillede.svg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1160/1080;
+  height: 100vh;
+}
+
+/*********BASICUX*********/
+
+#uxtekst {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.basic2 {
+  width: 100%;
+  background-image: url(./billeder/basic.svg);
+  aspect-ratio: 887/116.99;
+  background-size: cover;
+  position: relative;
+  background-color: #005faa;
+}
+
+.ux {
+  width: 18%;
+  position: absolute;
+  background-image: url(./billeder/uxheader.svg);
+  background-size: cover;
+  aspect-ratio: 243.19/271.32;
+  top: 75%;
+  left: 65%;
+}
+
+.tekstux {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20%;
+}
+
+@media (min-width: 600px) {
+  .tekstux {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 20%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tekstux {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+  }
+}
+
+#billederux {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  background-image: url(./billeder/uxbillede.svg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1160/1080;
+  height: 100vh;
+}
+
+/*******BASIC ANIMATION*******/
+
+#animationtekst {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.basic3 {
+  width: 100%;
+  background-image: url(./billeder/basic.svg);
+  aspect-ratio: 887/116.99;
+  background-size: cover;
+  position: relative;
+  background-color: #005faa;
+}
+
+.animation {
+  width: 75%;
+  position: absolute;
+  background-image: url(./billeder/animationheader.svg);
+  background-size: cover;
+  aspect-ratio: 1056.65/271.32;
+  top: 75%;
+  left: 20%;
+}
+
+.tekstanimation {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20%;
+}
+
+@media (min-width: 600px) {
+  .tekstanimation {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 20%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tekstanimation {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+  }
+}
+
+.billederanimation {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  width: 100%;
+  background-image: url(./billeder/animationbillede.svg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1160/1080;
+  height: 100vh;
+}
+
+/**********BASIC CONTENT**********/
+
+#contenttekst {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.basic4 {
+  width: 100%;
+  background-image: url(./billeder/basic.svg);
+  aspect-ratio: 887/116.99;
+  background-size: cover;
+  position: relative;
+  background-color: #005faa;
+}
+
+.content {
+  width: 60%;
+  position: absolute;
+  background-image: url(./billeder/contentheader.svg);
+  background-size: cover;
+  aspect-ratio: 821.43/271.32;
+  top: 75%;
+  left: 35%;
+}
+
+.tekstcontent {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20%;
+}
+
+@media (min-width: 600px) {
+  .tekstcontent {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 20%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tekstcontent {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+  }
+}
+
+#billedercontent {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 100%;
+  background-image: url(./billeder/contentbillede.svg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1160/1080;
+  height: 100vh;
+}
+
+/***********FOOTER***********/
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: acumin-pro-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #005faa;
+  color: whitesmoke;
+}
+
+.footertext {
+  grid-column: 1/2;
+  padding: 3%;
+}
+
+.footertext h2 {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+
+.footertext h3 {
+  margin-top: 2%;
+}
+
+/*******ANIMATIONER******/
+
+.dukop {
+  animation-name: dukop;
+  animation-duration: 0.2s;
+  animation-iteration-count: initial;
+  /* animation-fill-mode: forwards; */
+  transform-origin: 100%;
+  animation-timing-function: linear;
+}
+
+@keyframes dukop {
+  from {
+    clip-path: inset(100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0);
+    opacity: 1;
+  }
+}
+
+.show {
+  opacity: 1;
+}
