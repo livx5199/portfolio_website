@@ -1,6 +1,6 @@
 /*BASIC WEB*/
 
-document.querySelector("#htmlrund").addEventListener("mouseover", startAnimation1);
+document.querySelector("#htmlrund").addEventListener("mouseenter", startAnimation1);
 
 
 function startAnimation1() {
@@ -21,7 +21,7 @@ function visTing1() {
 
     document.querySelector('.html_sprite').classList.add("show");
 
-    document.querySelector("#htmlrund").addEventListener("mouseout", endHover1);
+    document.querySelector("#htmlrund").addEventListener("mouseleave", endHover1);
 }
  
 function endHover1() {
